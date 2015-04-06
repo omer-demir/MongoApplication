@@ -1,0 +1,21 @@
+@html.extend('layout',function(model){
+	@html.block('body',function(model){
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Notes Page</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="list-group">
+					@model.notes.forEach(function(item){
+						<div class="list-group-item">
+							@item.name <span class="badge badge-info">@item.notes.length</span>
+						</div>
+					})
+				</div>
+			</div>
+		</div>
+	})
+})

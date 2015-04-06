@@ -1,0 +1,12 @@
+@html.extend('./layout',function(model){
+	@html.block('body',function(model){
+		<p>@model.message</p>
+		<p>From admin page</p>
+	})
+
+	@html.block('scripts',function(model){
+		<script type="text/javascript">
+			//write script for page level in here
+		</script>
+	})
+})
